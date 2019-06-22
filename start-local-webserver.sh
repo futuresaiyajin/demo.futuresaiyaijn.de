@@ -1,10 +1,12 @@
 #!/bin/sh
 
-# shut down currently running webserver
+echo "Shutting down currently running webserver..."
 docker-compose down
 
-# generate fresh website build
+echo "Generating fresh website build..."
 yarn build
 
-# deploy via docker-compose
+echo "Starting webserver..."
 docker-compose up -d --build
+
+echo "Webserver is running at 'http://localhost:8080'."

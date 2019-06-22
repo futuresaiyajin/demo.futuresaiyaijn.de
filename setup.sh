@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# install global dependencies
+echo "Installing global dependencies..."
 sudo npm install ng-tailwindcss -g
 
-# install local dependencies
+echo "Installing local dependencies..."
 yarn
+
+echo "Setup completed successfully."
