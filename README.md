@@ -32,7 +32,7 @@ Run `yarn e2e` to execute the end-to-end tests via [Protractor](http://www.protr
 
 ## Running end-to-end tests #2
 
-Run `./integrationtest/start.sh` to execute the end-to-end tests via [WebDriverIO](https://webdriver.io/).
+Run `yarn test:selenium` or `./integrationtest/start.sh` to execute the end-to-end tests via [WebDriverIO](https://webdriver.io/).
 
 ## Further help
 

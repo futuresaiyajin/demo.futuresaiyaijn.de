@@ -4,13 +4,7 @@
   "description": "Boilerplate project to run WebdriverIO tests with Cucumber",
   "homepage": "https://github.com/webdriverio/cucumber-boilerplate",
   "scripts": {
-    "clean": "read -p \"Are you sure you want to clean the project? [y/n] \" REPLY; if [[ $REPLY =~ ^[Yy]$ ]]; then rm -R .git .github demo-app test .codeclimate.yml .travis.yml jest.json wdio.BUILD.conf.js src/features/**; fi",
-    "local-webserver": "forever start -s ./node_modules/.bin/http-server ./demo-app -s",
-    "test": "npm run test:validate && npm run test:unit && npm run test:features",
-    "test:features": "npm run local-webserver & (wdio wdio.BUILD.conf.js; wdio_ret=$?; forever stopall; exit $wdio_ret)",
-    "test:unit": "jest --config=jest.json",
-    "test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'",
-    "test:selenium": "./node_modules/.bin/wdio"
+    "test:selenium": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -30,18 +24,16 @@
     "W. van Kuipers <github@pwnd.nl>"
   ],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@wdio/cli": "^5.10.7",
     "@wdio/local-runner": "^5.10.7",
     "@wdio/spec-reporter": "^5.9.3",
     "@wdio/sync": "^5.10.1",
+    "babel-core": "~6.26.3",
     "babel-preset-env": "~1.7.0",
     "babel-register": "~6.26.0",
     "chai": "~4.2.0",
     "wdio-cucumber-framework": "~2.2.0",
     "webdriverio": "^5.10.7"
-  },
-  "devDependencies": {
-    "babel-core": "~6.26.3"
   }
 }
