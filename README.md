@@ -34,6 +34,15 @@ Run `yarn e2e` to execute the end-to-end tests via [Protractor](http://www.protr
 
 Run `yarn test:selenium` or `./integrationtest/start.sh` to execute the end-to-end tests via [WebDriverIO](https://webdriver.io/).
 
+## Standalone Selenium server
+
+Run `start.sh` inside of `./services/selenium-hub/` to start a Selenium server at [http://localhost:4444](http://localhost:4444/).
+
+## Standalone Selenoid server
+
+Run `start.sh` inside of `./services/selenoid-hub/` to start a Selenium server at [http://localhost:4444](http://localhost:4444/).
+You can also monitor the progress of the Selenoid server in real-time at [http://localhost:8090](http://localhost:8090/).
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
