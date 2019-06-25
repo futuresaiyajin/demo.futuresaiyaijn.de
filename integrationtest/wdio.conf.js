@@ -32,7 +32,7 @@ exports.config = {
     // `wdio` will be called from there.
     //
     specs: [
-        './src/features/**/*.feature',
+        './integrationtest/src/features/**/*.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -145,7 +145,7 @@ exports.config = {
         backtrace: false,
         // <string[]> filetype:compiler used for processing required features
         compiler: [
-            'js:babel-register',
+            'js:@babel/register',
         ],
         // <boolean< Treat ambiguous definitions as errors
         failAmbiguousDefinitions: true,
@@ -167,9 +167,9 @@ exports.config = {
         profile: [],
         // <string[]> (file/dir) require files before executing features
         require: [
-            './src/steps/given.js',
-            './src/steps/then.js',
-            './src/steps/when.js',
+            './integrationtest/src/steps/given.js',
+            './integrationtest/src/steps/then.js',
+            './integrationtest/src/steps/when.js',
             // Or search a (sub)folder for JS files with a wildcard
             // works since version 1.1 of the wdio-cucumber-framework
             //'./src/**/*.js',

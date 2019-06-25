@@ -145,7 +145,7 @@ exports.config = {
         backtrace: false,
         // <string[]> filetype:compiler used for processing required features
         compiler: [
-            'js:babel-register',
+            'js:@babel/register',
         ],
         // <boolean< Treat ambiguous definitions as errors
         failAmbiguousDefinitions: true,
