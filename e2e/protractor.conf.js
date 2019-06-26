@@ -9,11 +9,9 @@ exports.config = {
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
-  multiCapabilities: [
-    {
-      'browserName': 'chrome'
-    },
-  ],
+  multiCapabilities: [{
+    'browserName': 'chrome'
+  }],
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
